@@ -1,0 +1,9 @@
+{%extends "shared/layout.html"%}{%block "content"%}
+<h3>{{resumes.title}}</h3>
+<br />
+{{resumes.skill}}
+<br />
+{{resumes.content}}
+<br><a href="{%url "resumes:edit" resumes.id%}">編輯</a> 
+<a href="{%url "resumes:delete" resumes.id%}">刪除履歷</a>
+{%endblock%}

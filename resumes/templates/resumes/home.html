@@ -1,0 +1,10 @@
+{% extends "shared/layout.html" %} {%block "content"%}
+<h1>履歷</h1>
+<a href="{% url "resumes:new" %}">新增履歷</a>
+
+<ul>
+    {% for resumes  in  resumes%}
+    <li><a href="{%url "resumes:show" resumes.id%}">{{resumes.title}}</a></li>
+    {% endfor %}
+</ul>
+{%endblock%}
